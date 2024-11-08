@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+        DDDDEXT - 設定
+    </title>
+    <meta charset="utf-8" />
+    <link href="dist/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <script src="dist/bootstrap/bootstrap.min.js">
+    </script>
+    <script src="dist/jquery.min.js">
+    </script>
+    <link href="css/settings.css" rel="stylesheet" type="text/css" />
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="/favicon.ico" rel="icon">
+    </link>
+    </link>
+    </link>
+</head>
+
+<body>
+    <div id="message">
+    </div>
+    <h2>
+        DDDDEXT - 設定介面
+    </h2>
+    <div class="row g-3">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button aria-controls="readme-tab-pane" aria-selected="true" class="nav-link active" data-bs-target="#readme-tab-pane" data-bs-toggle="tab" id="readme-tab" role="tab" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                    </svg> 使用需知 </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button aria-controls="home-tab-pane" aria-selected="false" class="nav-link" data-bs-target="#home-tab-pane" data-bs-toggle="tab" id="home-tab" role="tab" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                    </svg> 偏好設定</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button aria-controls="ocr-tab-pane" aria-selected="false" class="nav-link" data-bs-target="#ocr-tab-pane" data-bs-toggle="tab" id="ocr-tab" role="tab" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-qr-code-scan" viewBox="0 0 16 16">
+                        <path d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5M.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5M4 4h1v1H4z" />
+                        <path d="M7 2H2v5h5zM3 3h3v3H3zm2 8H4v1h1z" />
+                        <path d="M7 9H2v5h5zm-4 1h3v3H3zm8-6h1v1h-1z" />
+                        <path d="M9 2h5v5H9zm1 1v3h3V3zM8 8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8zm2 2H9V9h1zm4 2h-1v1h-2v1h3zm-4 2v-1H8v1z" />
+                        <path d="M12 9h2V8h-2z" />
+                    </svg> OCR</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button aria-controls="autofill-tab-pane" aria-selected="false" class="nav-link" data-bs-target="#autofill-tab-pane" data-bs-toggle="tab" id="autofill-tab" role="tab" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+                        <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
+                        <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                    </svg> 自動填表單</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button aria-controls="autocheck-tab-pane" aria-selected="false" class="nav-link" data-bs-target="#autocheck-tab-pane" data-bs-toggle="tab" id="autocheck-tab" role="tab" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
+                    </svg> 自動打勾/移除勾勾</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button aria-controls="injectjs-tab-pane" aria-selected="false" class="nav-link" data-bs-target="#injectjs-tab-pane" data-bs-toggle="tab" id="injectjs-tab" role="tab" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                        <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0" />
+                    </svg> 注入 Javascript</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button aria-controls="cookie-tab-pane" aria-selected="false" class="nav-link" data-bs-target="#cookie-tab-pane" data-bs-toggle="tab" id="cookie-tab" role="tab" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cookie" viewBox="0 0 16 16">
+                        <path d="M6 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m4.5.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-.5 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                        <path d="M8 0a7.96 7.96 0 0 0-4.075 1.114q-.245.102-.437.28A8 8 0 1 0 8 0m3.25 14.201a1.5 1.5 0 0 0-2.13.71A7 7 0 0 1 8 15a6.97 6.97 0 0 1-3.845-1.15 1.5 1.5 0 1 0-2.005-2.005A6.97 6.97 0 0 1 1 8c0-1.953.8-3.719 2.09-4.989a1.5 1.5 0 1 0 2.469-1.574A7 7 0 0 1 8 1c1.42 0 2.742.423 3.845 1.15a1.5 1.5 0 1 0 2.005 2.005A6.97 6.97 0 0 1 15 8c0 .596-.074 1.174-.214 1.727a1.5 1.5 0 1 0-1.025 2.25 7 7 0 0 1-2.51 2.224Z" />
+                    </svg> cookie</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button aria-controls="memo-tab-pane" aria-selected="false" class="nav-link" data-bs-target="#memo-tab-pane" data-bs-toggle="tab" id="memo-tab" role="tab" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+                    </svg> 備註</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <!-- tab 1 -->
+            <div aria-labelledby="readme-tab" class="tab-pane fade show active" id="readme-tab-pane" role="tabpanel" tabindex="0">
+                <p>
+                    DDDDEXT 是網頁驗證碼自動輸入機器人。
+                </p>
+                <p>
+                    爬山想搶山屋/搶信用卡活動的登錄/掛號…都需要輸入驗證碼，透過 ddddocr 可以自動識別並輸入文字驗證碼。
+                </p>
+                <p>
+                    搶票機制，是在比誰更快送出訂單，機器人一定比人工點擊或輸入快，一般民眾在資訊技術的落差下，是被欺凌的弱勢族群，相信分享ddddext原始碼有助於改變搶票機制，是對公眾有利益的一件事。
+                </p>
+                <p>
+                    售票系統的「驗證碼」機制會讓一般不會寫程式的民眾更難公平地購買到預期的門票，因為機器人可以自動填入驗證碼內容。
+                </p>
+                <p>
+                    在整個網站裡出現的「搶票」指的是「非台灣的藝文活動或車票」。
+                </p>
+                <p>
+                    搶票程式在其他民主國家有什麼樣的標準？搶票程式只有在台灣會被處罰嗎？
+                </p>
+                <div class="bd-callout bd-callout-info">
+                    台灣藝文活動的
+                    <strong>
+                        文創法第十條
+                    </strong>
+                    中的「
+                    <code>
+                        不正方式
+                    </code>
+                    」由於沒有明確定義，代表的是所有軟體都涉嫌違反。故在此呼籲大家，勿以身試法。
+                </div>
+                <hr />
+                <h3>
+                    法律聲明
+                </h3>
+                <p>
+                    使用此儲存庫或與之相關的任何程式碼，即表示您同意
+                    <a href="https://github.com/max32002/ddddext/blob/master/LEGAL_NOTICE.md" target="_blank">
+                        法律聲明
+                    </a>
+                    。作者不對該儲存庫的使用負責與背書，也不對其他使用者所做的任何副本、分叉、重新上傳或與 DDDDEXT 相關的任何其他內容負責。 這是作者唯一的帳戶和儲存庫。 為了防止假冒或不負責任的行為，請遵守此儲存庫使用的 GNU GPL 授權。
+                </p>
+                <div class="bd-callout bd-callout-info">
+                    作者沒有意圖要他人購得的票券進行加價轉售或是使用在違法的事情上，他人的行為並不在作者的意識支配範圍之內，作者不對他人的非法行為負責。
+                </div>
+            </div>
+            <!-- tab 2 -->
+            <div aria-labelledby="home-tab" class="tab-pane fade" id="home-tab-pane" role="tabpanel" tabindex="0">
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="homepage">
+                        自動開啟的網址
+                    </label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="homepage" value="" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="refresh_datetime" class="col-sm-2 col-form-label">刷新在指定時間</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="refresh_datetime" value="" />
+                        <div class="bd-callout bd-callout-info">
+                            <strong>提示：</strong>
+                            時間格式 <code>HH:MM:SS</code> (小時:分鐘:秒數)。在設定介面修改並存檔，並不會套用在「已經」開出的瀏覽器，只會套用在存檔之後按「搶票」所開出的瀏覽器。
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="proxy_server_port" class="col-sm-2 col-form-label">Proxy IP:PORT</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="proxy_server_port" value="" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="window_size">
+                        瀏覽器視窗大小
+                    </label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="window_size" value="" />
+                        <div class="bd-callout bd-callout-info">
+                            <strong>提示：</strong>
+                            沒輸入則不會調整瀏覽器視窗，輸入格式：寬,高。例如: <code>480,1024</code>。
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="play_sound_filename">
+                        播放音效檔案路徑
+                    </label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="play_sound_filename" value="" />
+                        <div class="bd-callout bd-callout-info">
+                            <strong>提示：</strong>
+                            可以透過 javascript 輸入 playsound(); 進行音效檔播放。
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label form-check-label" for="adblock">擋掉 Tracker 連線</label>
+                    <div class="col-sm-10">
+                        <input class="form-check-input" type="checkbox" id="adblock" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label form-check-label" for="hide_some_image">擋掉字型與部份圖示</label>
+                    <div class="col-sm-10">
+                        <input class="form-check-input" type="checkbox" id="hide_some_image" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label form-check-label" for="block_facebook_network">擋掉 Facebook 連線</label>
+                    <div class="col-sm-10">
+                        <input class="form-check-input" type="checkbox" id="block_facebook_network" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ddddext_version" class="col-sm-2 col-form-label">版本</label>
+                    <div class="col-sm-10">
+                        <p id="ddddext_version" class="text-secondary mt-2"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- tab 3 -->
+            <div aria-labelledby="ocr-tab" class="tab-pane fade" id="ocr-tab-pane" role="tabpanel" tabindex="0">
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label form-check-label" for="ocr_captcha_enable">DDDD OCR</label>
+                    <div class="col-sm-10">
+                        <input class="form-check-input" type="checkbox" id="ocr_captcha_enable" />
+                        <div class="bd-callout bd-callout-info">
+                            <strong>說明：</strong>
+                            關閉 DDDD OCR 功能並不會影響其他功能，例如：「自動填表單」、「自動打勾」、「注入 Javascript」。
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="remote_url">
+                        OCR Server URL
+                    </label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="remote_url" value="" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label form-check-label" for="ocr_captcha_use_public_server">
+                        MaxBot Public OCR Server
+                    </label>
+                    <div class="col-sm-10">
+                        <input class="form-check-input" id="ocr_captcha_use_public_server" type="checkbox" />
+                    </div>
+                </div>
+                <hr />
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                #
+                            </th>
+                            <th scope="col">
+                                驗證碼網址
+                            </th>
+                            <th scope="col">
+                                驗證碼圖片 selector
+                            </th>
+                            <th scope="col">
+                                輸入欄位 selector
+                            </th>
+                            <th scope="col">
+                                驗證碼字元數
+                            </th>
+                            <th scope="col">
+                                驗證碼重設 selector
+                            </th>
+                            <th scope="col">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="captcha-container">
+                        <tr id="captcha-actionbar">
+                            <td colspan="6">
+                            </td>
+                            <td>
+                                <button class="btn btn-success" id="new_captcha_btn" type="button">
+                                    增加
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="bd-callout bd-callout-info">
+                    <strong>說明：</strong>
+                    <ul>
+                        <li>「<code>驗證碼網址</code>」可以使用萬用字元 <code>*</code> 符號。</li>
+                        <li>「<code>驗證碼網址</code>」沒輸入，代表不具備功能。不知道輸入什麼，可以輸入萬用字元 <code>*</code> 符號，代表每一個網頁都符合。</li>
+                        <li>「驗證碼字元數」 欄位內容可以不輸入，不輸入代表驗證碼每次的長度是變動的。</li>
+                        <li>「驗證碼重設 selector」 欄位內容可以不輸入。欄位功能：當遇到OCR 失敗時, 程式要自動去按那裡, 重新產生驗證碼。有些網站是點擊驗證碼圖片重新取得，幾乎都有另外附重新取得驗證碼的按鈕。</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- tab 4 -->
+            <div aria-labelledby="autofill-tab" class="tab-pane fade" id="autofill-tab-pane" role="tabpanel" tabindex="2">
+                <p>針對不同的網頁內容，在自動填入內容時，會需要不同的設定值(selector)，selector 使用方式請參考個案教學：<br />
+                    <a href='https://ddddext.max-everyday.com/case/' target="_blank">https://ddddext.max-everyday.com/case/</a> (另開新視窗)
+                </p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                #
+                            </th>
+                            <th scope="col">
+                                自動輸入網址
+                            </th>
+                            <th scope="col">
+                                自動輸入欄位selector
+                            </th>
+                            <th scope="col">
+                                自動輸入欄位填入值
+                            </th>
+                            <th scope="col">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="autofill-container">
+                        <tr id="autofill-actionbar">
+                            <td colspan="4">
+                            </td>
+                            <td>
+                                <button class="btn btn-success" id="new_autofill_btn" type="button">
+                                    增加
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="bd-callout bd-callout-info">
+                    <strong>說明：</strong>
+                    <ul>
+                        <li>「<code>自動輸入網址</code>」可以使用萬用字元 <code>*</code> 符號。</li>
+                        <li>「<code>自動輸入網址</code>」沒輸入，代表不具備功能。不知道輸入什麼，可以輸入萬用字元 <code>*</code> 符號，代表每一個網頁都符合。</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- tab 5 -->
+            <div aria-labelledby="autocheck-tab" class="tab-pane fade" id="autocheck-tab-pane" role="tabpanel" tabindex="2">
+                <div>自動打勾「所有」checkbox的網址關鍵字</div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                #
+                            </th>
+                            <th scope="col">
+                                matches URL
+                            </th>
+                            <th scope="col">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="checkall-container">
+                        <tr id="checkall-actionbar">
+                            <td colspan="2">
+                            </td>
+                            <td>
+                                <button class="btn btn-success" id="new_checkall_btn" type="button">
+                                    增加
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="bd-callout bd-callout-info">
+                    <strong>說明：</strong>
+                    <ul>
+                        <li>「<code>URL</code>」可以使用萬用字元 <code>*</code> 符號。</li>
+                        <li>「<code>URL</code>」沒輸入，代表不具備功能。不知道輸入什麼，可以輸入萬用字元 <code>*</code> 符號，代表每一個網頁都符合。</li>
+                        <li>只有符合 URL 的網址，才會把所有checkbox 打勾。不建議套用到所有網頁，因為會造成很多困擾！</li>
+                    </ul>
+                </div>
+                <hr />
+                <p>如果需要勾選/取消勾選「指定」selector的內容是要，請使用下列功能。</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                #
+                            </th>
+                            <th scope="col">
+                                自動輸入網址
+                            </th>
+                            <th scope="col">
+                                自動輸入欄位selector
+                            </th>
+                            <th scope="col">
+                                自動勾選狀態
+                            </th>
+                            <th scope="col">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="autocheck-container">
+                        <tr id="autocheck-actionbar">
+                            <td colspan="4">
+                            </td>
+                            <td>
+                                <button class="btn btn-success" id="new_autocheck_btn" type="button">
+                                    增加
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="bd-callout bd-callout-info">
+                    <strong>說明：</strong>
+                    <ul>
+                        <li>「<code>自動輸入網址</code>」可以使用萬用字元 <code>*</code> 符號。</li>
+                        <li>「<code>自動輸入網址</code>」沒輸入，代表不具備功能。不知道輸入什麼，可以輸入萬用字元 <code>*</code> 符號，代表每一個網頁都符合。</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- tab 6 -->
+            <div aria-labelledby="injectjs-tab" class="tab-pane fade" id="injectjs-tab-pane" role="tabpanel" tabindex="2">
+                <p>針對不同的網頁內容，在自動注入 javascript 內容，使用方式請參考個案教學：<br />
+                    <a href='https://ddddext.max-everyday.com/script/' target="_blank">https://ddddext.max-everyday.com/script/</a> (另開新視窗)
+                </p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                #
+                            </th>
+                            <th scope="col">
+                                注入 Javascript
+                            </th>
+                            <th scope="col">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="injectjs-container">
+                        <tr id="injectjs-actionbar">
+                            <td colspan="2">
+                                <input class="form-check-input" type="checkbox" id="show_injectjs_advanced_field" />
+                                <label for="show_injectjs_advanced_field">顯示進階設定值</label>
+                            </td>
+                            <td>
+                                <button class="btn btn-success" id="new_injectjs_btn" type="button">
+                                    增加
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="bd-callout bd-callout-info">
+                    <strong>說明：</strong>
+                    <ul>
+                        <li>「<code>URL</code>」可以使用萬用字元 <code>*</code> 符號。</li>
+                        <li>「<code>URL</code>」沒輸入，代表每一頁都符合。</li>
+                        <li>「<code>Javascript</code>」雖然執行起來很方便，但實際上是非常的不安全(unsafe-eval)，請勿隨意貼上來路不明的腳本。</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- tab 7 -->
+            <div aria-labelledby="cookie-tab" class="tab-pane fade" id="cookie-tab-pane" role="tabpanel" tabindex="2">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                #
+                            </th>
+                            <th scope="col">
+                                Name
+                            </th>
+                            <th scope="col">
+                                Value
+                            </th>
+                            <th scope="col">
+                                Domain
+                            </th>
+                            <th scope="col">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="cookie-container">
+                        <tr id="cookie-actionbar">
+                            <td colspan="4">
+                            </td>
+                            <td>
+                                <button class="btn btn-success" id="new_cookie_btn" type="button">
+                                    增加
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="bd-callout bd-callout-info">
+                    <strong>如何在已經登入帳號的瀏覽器，取得 <code>Cookies</code> 的值？</strong>
+                    <ul>
+                        <li>在 Windows 請按 F12 或 Ctrl + Shift + I, 在 macOS 請按 Cmd+Option+I, 即可叫出開發者工具(DevTools).</li>
+                        <li>在 Appliction 分頁裡的 Storage 項目中的 Cookies 裡即取得登入後 Cookie 的 Name / Value / Domain 內容值。</li>
+                        <li>在正常瀏覽器登入帳號後，取得 Cookie, 接著在其他視窗裡的機器人使用相同的 Cookie，這時候 2個瀏覽器(正常瀏覽器+機器人)都是使用相同的 Cookie，只要任何一個瀏覽器點了登出，這2個瀏覽器都會無法再使用該 Cookie, 因為內容已過期。</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- tab 9 -->
+            <div aria-labelledby="memo-tab" class="tab-pane fade" id="memo-tab-pane" role="tabpanel" tabindex="2">
+                <p>針對目前設定檔的補充說明：</p>
+                <textarea class="form-control" id="memo" rows="20"></textarea>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" id="run_btn">
+                搶票
+            </button>
+            <button class="btn btn-primary" id="save_btn">
+                存檔
+            </button>
+            <button class="btn btn-primary" id="reset_btn">
+                重設為預設值
+            </button>
+            <button class="btn btn-primary" id="import_btn">
+                匯入
+            </button>
+            <button class="btn btn-danger" id="exit_btn">
+                結束
+            </button>
+        </div>
+        <div class="col-12">
+            <span class="text-danger" id="run_btn_pressed_message"></span>
+        </div>
+    </div>
+    <div class="modal" id="message_modal" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="message_modal_title">
+                        MaxBot
+                    </h2>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="message_detail">
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">
+                        關閉
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- import_modal -->
+    <div class="modal fade" id="importJsonModal" tabindex="-1" aria-labelledby="importJsonModalTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">匯入設定值</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12 mb-3">
+                        <label for="json_url" class="form-label">JSON 設定值網址</label>
+                        <div>
+                            <input type="text" class="form-control" id="json_url" placeholder="JSON 設定值網址" required="" />
+                        </div>
+                         <span>
+                            請輸入 http:// 或 https:// 開頭的網址
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">關閉</button>
+                    <button type="button" class="btn btn-primary" id='json-import-btn' onclick="json_import();">
+                        <span id="json-import-btn-title">匯入</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /import_modal -->
+    <div class="disappear">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        #
+                    </th>
+                    <th scope="col">
+                        網址關鍵字
+                    </th>
+                    <th scope="col">
+                        欄位selector
+                    </th>
+                    <th scope="col">
+                        欄位填入值
+                    </th>
+                    <th scope="col">
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="autofill-template">
+                <tr data-index="@node@">
+                    <th scope="row">
+                        @node@
+                    </th>
+                    <td>
+                        <input class="form-control" id="autofill_url_@node@" value="" />
+                    </td>
+                    <td>
+                        <input class="form-control" id="autofill_selector_@node@" value="" />
+                    </td>
+                    <td>
+                        <input class="form-control" id="autofill_value_@node@" value="" />
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" onclick="autofill_remove(@node@);" type="button">
+                            刪除
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        #
+                    </th>
+                    <th scope="col">
+                        網址關鍵字
+                    </th>
+                    <th scope="col">
+                        欄位selector
+                    </th>
+                    <th scope="col">
+                        欄位填入值
+                    </th>
+                    <th scope="col">
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="autocheck-template">
+                <tr data-index="@node@">
+                    <th scope="row">
+                        @node@
+                    </th>
+                    <td>
+                        <input class="form-control" id="autocheck_url_@node@" value="" />
+                    </td>
+                    <td>
+                        <input class="form-control" id="autocheck_selector_@node@" value="" />
+                    </td>
+                    <td>
+                        <input class="form-check-input" type="checkbox" id="autocheck_value_@node@" value="" />
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" onclick="autocheck_remove(@node@);" type="button">
+                            刪除
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        #
+                    </th>
+                    <th scope="col">
+                        網址關鍵字
+                    </th>
+                    <th scope="col">
+                        captcha selector
+                    </th>
+                    <th scope="col">
+                        input selector
+                    </th>
+                    <th scope="col">
+                        captcha length
+                    </th>
+                    <th scope="col">
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="captcha-template">
+                <tr data-index="@node@">
+                    <th scope="row">
+                        @node@
+                    </th>
+                    <td>
+                        <input class="form-control" id="captcha_url_@node@" value="" />
+                    </td>
+                    <td>
+                        <input class="form-control" id="captcha_selector_@node@" value="" />
+                    </td>
+                    <td>
+                        <input class="form-control" id="input_selector_@node@" value="" />
+                    </td>
+                    <td>
+                        <input class="form-control" id="maxlength_@node@" value="4" />
+                    </td>
+                    <td>
+                        <input class="form-control" id="captcha_renew_selector_@node@" value="" />
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" onclick="captcha_remove(@node@);" type="button">
+                            刪除
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="disappear">
+        <table class="table table-striped">
+            <tbody id="injectjs-template">
+                <tr data-index="@node@">
+                    <th scope="row">
+                        @node@
+                    </th>
+                    <td>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label form-check-label" for="injectjs_url_@node@">
+                                matches URL
+                            </label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="injectjs_url_@node@" value="" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label form-check-label" for="injectjs_script_@node@">
+                                Javascript
+                            </label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" id="injectjs_script_@node@" rows="7"></textarea>
+                            </div>
+                        </div>
+                        <div injectjs-advanced="true" class="row mb-3 disappear">
+                            <label class="col-sm-2 col-form-label form-check-label" for="injectjs_run_at_@node@">
+                                run at
+                            </label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="injectjs_run_at_@node@">
+                                    <option value="document_start">DOM 仍在載入中</option>
+                                    <option value="document_end">DOM 已完成加載，圖片或資源可能仍在下載</option>
+                                    <option value="document_idle">所有資源已完成載入。</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div injectjs-advanced="true" class="row mb-3 disappear">
+                            <label class="col-sm-2 col-form-label form-check-label" for="injectjs_world_@node@">
+                                world
+                            </label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="injectjs_world_@node@">
+                                    <option value="ISOLATED">獨立世界，擴充功能專屬的執行環境</option>
+                                    <option value="MAIN">DOM 的主要世界，也就是與代管網頁 JavaScript 共用的執行環境</option>
+                                </select>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" onclick="injectjs_remove(@node@);" type="button">
+                            刪除
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="disappear">
+        <table class="table table-striped">
+            <tbody id="cookie-template">
+                <tr data-index="@node@">
+                    <th scope="row">
+                        @node@
+                    </th>
+                    <td>
+                        <input class="form-control" id="cookie_key_@node@" value="" />
+                    </td>
+                    <td>
+                        <input class="form-control" id="cookie_value_@node@" value="" />
+                    </td>
+                    <td>
+                        <input class="form-control" id="cookie_domain_@node@" value="" />
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" onclick="cookie_remove(@node@);" type="button">
+                            刪除
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="disappear">
+        <table class="table table-striped">
+            <tbody id="checkall-template">
+                <tr data-index="@node@">
+                    <th scope="row">
+                        @node@
+                    </th>
+                    <td>
+                        <input class="form-control" id="checkall_url_@node@" value="" />
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" onclick="checkall_remove(@node@);" type="button">
+                            刪除
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="settings.js">
+    </script>
+</body>
+
+</html>

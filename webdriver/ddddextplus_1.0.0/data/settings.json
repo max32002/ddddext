@@ -1,0 +1,74 @@
+{
+    "homepage": "about:blank",
+    "refresh_datetime": "",
+    "memo": "",
+    "ocr_captcha": {
+        "enable": true,
+        "beta": true,
+        "force_submit": true,
+        "captcha": [
+            {
+                "enable": true,
+                "url": "",
+                "captcha": "",
+                "captcha_renew": "",
+                "input": "",
+                "maxlength": "4"
+            }
+        ]
+    },
+    "advanced": {
+        "chrome_extension": true,
+        "adblock": true,
+        "hide_some_image": false,
+        "block_facebook_network": false,
+        "play_sound_filename": "sound_ding-dong.wav",
+        "headless": false,
+        "verbose": false,
+        "remote_url": "\"http://127.0.0.1:16888/\"",
+        "proxy_server_port": "",
+        "window_size": "480,1024"
+    },
+    "autofill": [
+        {
+            "enable": true,
+            "url": "",
+            "selector": "",
+            "value": ""
+        }
+    ],
+    "autocheck": [
+        {
+            "enable": true,
+            "url": "",
+            "selector": "",
+            "value": false
+        }
+    ],
+    "injectjs": [
+        {
+            "enable": true,
+            "url": "",
+            "script": "",
+            "run_at": "document_end",
+            "world": "ISOLATED"
+        }
+    ],
+    "cookie": [
+        {
+            "enable": true,
+            "domain": "",
+            "key": "",
+            "value": "",
+            "path": "/",
+            "http_only": true,
+            "secure": true
+        }
+    ],
+    "checkall": [
+        {
+            "enable": true,
+            "url": ""
+        }
+    ]
+}
