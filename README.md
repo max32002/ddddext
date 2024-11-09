@@ -34,8 +34,6 @@ https://github.com/max32002/ddddext/releases
 * 搶票 https://youtu.be/1tOjwEo2gbQ
 * 掛號 https://youtu.be/1vCm3NjVsYY
 * cityline https://youtu.be/HTotEq36E9s
-* 2024-04-28 版功能介紹: https://youtu.be/9QOpJkNnvP8
-* 2024-05-02 版功能介紹: https://youtu.be/gdGRuLmD7B4
 
 
 # Feature
