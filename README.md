@@ -29,6 +29,7 @@ https://github.com/max32002/ddddext/releases
 * 網頁驗證碼自動輸入使用教學 https://youtu.be/wZy4BQ-z-S4
 * 自動打勾+輸入欄位內容 https://youtu.be/98YikOWDLjo
 * 在特定欄位自動打勾/移除勾勾 https://youtu.be/q17yvLtRato
+* 用 ChatGPT 寫 jQuery 腳本 https://youtu.be/IRcC7cHs__I
 
 
 # Feature
