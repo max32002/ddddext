@@ -100,8 +100,14 @@ A: 執行 git clone 2次, 重覆取得 source code, 才會有這個問題, 如�
 如果你想把已下載的刪除, 可以直把把 ddddext 目錄刪掉即可。
 如果你想更新 source code, 可以重新下載, 或是先 cd ddddext 目錄後, 再執行 git pull , 可以更新 source code 為新的版本。
 
-PS:
-* 請先確定你的python 執行環境下已安裝 nodriver 及相關的套件，請參考 requirement.txt 檔案內容。
+### Q: 取得source code後跑出來錯誤訊息：no module named requests
+
+A: 請先確定你的python 執行環境下已安裝 nodriver 及相關的套件，請參考 requirement.txt 檔案內容。
+
+### Q: 最新版 websockets 則會造成 nodriver 打不開的情況
+
+A: 將 websockets==13.1 指定版本可以解決此問題
+
 
 # File Description
 (檔案說明)
