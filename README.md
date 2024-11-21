@@ -104,9 +104,9 @@ A: 執行 git clone 2次, 重覆取得 source code, 才會有這個問題, 如�
 
 A: 請先確定你的python 執行環境下已安裝 nodriver 及相關的套件，請參考 requirement.txt 檔案內容。
 
-### Q: 最新版 websockets 則會造成 nodriver 打不開的情況
+### Q: 最新版 websockets 會造成 nodriver 打不開的情況
 
-A: 將 websockets==13.1 指定版本可以解決此問題
+A: 我個人使用的 Windows 11 與 macOS 都沒遇到這個問題，請在手動移除 websockets，再指定修改 requirement.txt 將 <code>websockets</code> 修改為 <code>websockets==13.1</code> ，指定版本 13.1 即可以解決此問題。
 
 
 # File Description
