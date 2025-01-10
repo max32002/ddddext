@@ -165,7 +165,11 @@ def clean_tmp_file():
 
 class HomepageHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("www/settings.html")
+        Root_Dir = util.get_app_root()
+        web_folder = os.path.join(Root_Dir, "www")
+        html_path = os.path.join(web_folder, "settings.html")
+        if os.path.exists(html_path):
+            self.render(html_path)
 
 class VersionHandler(tornado.web.RequestHandler):
     def get(self):
